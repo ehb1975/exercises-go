@@ -1,4 +1,4 @@
-#Ping pong game
+# Ping pong game
 
 ## Issues:
 - goroutines
