@@ -5,6 +5,9 @@
 - channels
 - context
 
+## Source:
+https://www.gopkg.blog/2024/05/learn-concurrency-in-go-practical.html
+
 ## Explanation of the code:
 
 Sending `0` itself doesn't inherently mean Player 1 has the ball; rather, it is the first action that places a value into the channel and allows the Player 1 goroutine to proceed. Here's a step-by-step explanation of how this setup works:
