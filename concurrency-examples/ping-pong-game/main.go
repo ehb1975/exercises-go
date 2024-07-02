@@ -23,11 +23,14 @@ func main() {
 		for {
 			select {
 			case <-ctx.Done():
-				return // Exit if context is canceled
+				// Exit if context is canceled
+				return
 			case <-ball:
 				fmt.Println("Ball is in player 1's court, sending...")
-				time.Sleep(time.Duration(rand.Intn(10)) * time.Second) // Random delay before serving
-				ball <- 1 // Serve the ball to player 2
+				// Random delay before serving
+				time.Sleep(time.Duration(rand.Intn(10)) * time.Second)
+				// Serve the ball to player 2
+				ball <- 1
 			}
 		}
 	}()
@@ -37,11 +40,14 @@ func main() {
 		for {
 			select {
 			case <-ctx.Done():
-				return // Exit if context is canceled
+				// Exit if context is canceled
+				return
 			case <-ball:
 				fmt.Println("Ball is in player 2's court, sending...")
-				time.Sleep(time.Duration(rand.Intn(10)) * time.Second) // Random delay before serving
-				ball <- 2 // Serve the ball back to player 1
+				// Random delay before serving
+				time.Sleep(time.Duration(rand.Intn(10)) * time.Second)
+				// Serve the ball back to player 1
+				ball <- 2
 			}
 		}
 	}()
