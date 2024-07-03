@@ -29,3 +29,9 @@
 
 ## Timeout and cancellation
 - Timeout and cancellation: Channels can be used to implement timeouts and cancellation of long-running operations. By using a select statement with a time. After the channel, you can wait for a specified amount of time before proceeding with an operation. Additionally, by using a cancel channel, you can signal to a goroutine that it should stop processing and return early.
+
+## Worker pool pattern
+Um worker pool é basicamente uma coleção de threads que fica esperando tarefas serem atribuídas a elas. Quando a thread finaliza a tarefa que foi atribuída, se torna disponível novamente para execução de uma  nova tarefa.
+
+## Sync.Mutex
+In concurrent programming, ensuring data integrity and preventing race conditions is crucial. In Go, the sync.Mutex type provides a simple and effective way to achieve mutual exclusion and control concurrent access to shared resources. 
